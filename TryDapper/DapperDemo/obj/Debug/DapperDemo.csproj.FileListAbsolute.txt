@@ -1,0 +1,9 @@
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\bin\Debug\DapperDemo.exe.config
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\obj\Debug\DapperDemo.csprojResolveAssemblyReference.cache
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\bin\Debug\DapperDemo.exe
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\bin\Debug\DapperDemo.pdb
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\bin\Debug\Dapper.dll
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\bin\Debug\Dapper.pdb
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\bin\Debug\Dapper.xml
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\obj\Debug\DapperDemo.exe
+C:\Users\yavor\Google Drive\Dapper Demos\TryDapper\DapperDemo\obj\Debug\DapperDemo.pdb
