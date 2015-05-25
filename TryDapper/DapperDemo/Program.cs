@@ -35,8 +35,38 @@ namespace DapperDemo
             Product newProduct = GetNewProduct();
             newProduct.ProductID = CreateProduct(newProduct);
 
+            // transactions
+            bool orderIsDeleted = DeleteOrder(10297);
+        }
 
-            Console.WriteLine();
+        private static bool DeleteOrder(int orderID)
+        {
+            using (SqlConnection connection = new SqlConnection(GetConnectionString()))
+            {
+                 connection.Open();
+
+                 using (var transaction =  connection.BeginTransaction())
+                 {
+                     try
+                     {
+                         const string sqlDeleteOrderDetails = @"DELETE FROM [Order Details] WHERE OrderID=@OrderID";
+                         const string sqlDeleteOrder = @"DELETE FROM [Orders] WHERE OrderID=@OrderID";
+
+                         int orderDetailsRowsAffected = connection.Execute(sqlDeleteOrderDetails, new { OrderID = orderID }, transaction);
+                         int orderRowsAffected = connection.Execute(sqlDeleteOrderDetails, new { OrderID = orderID }, transaction);
+                         throw new Exception();
+
+                         transaction.Commit();
+
+                         return orderRowsAffected > 0 ? true : false;
+                     }
+                     catch (Exception ex)
+                     {
+                         transaction.Rollback();
+                         return false;
+                     }
+                 }
+            }
         }
 
         private static int CreateProduct(Product newProduct)
